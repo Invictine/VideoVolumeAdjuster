@@ -1,0 +1,19 @@
+body {
+    background: #000;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 4px 4px;
+}
+
+@keyframes shine {
+    0% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 0.1; }
+}
+
+.bg-shine {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(white, transparent);
+    opacity: 0.1;
+    animation: shine 5s infinite linear;
+}

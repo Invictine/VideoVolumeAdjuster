@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Volume Adjuster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white flex items-center justify-center min-h-screen">
+
+    <div class="bg-gray-900 p-6 rounded-xl shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+            Adjust Video Audio
+        </h1>
+
+        <!-- Video Player -->
+        <div class="relative mb-4">
+            <video id="videoPlayer" class="w-full rounded-lg shadow-md" controls>
+                <source src="/videos/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <audio id="musicTrack" src="/audio/music.mp3"></audio>
+            <audio id="vocalsTrack" src="/audio/vocals.mp3"></audio>
+        </div>
+
+        <!-- Volume Controls -->
+        <div class="space-y-4">
+            <div>
+                <label class="block text-sm">Music Volume: <span id="musicValue">100</span>%</label>
+                <input type="range" id="musicVolume" min="0" max="200" value="100" step="1"
+                    class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+            </div>
+
+            <div>
+                <label class="block text-sm">Vocals Volume: <span id="vocalsValue">100</span>%</label>
+                <input type="range" id="vocalsVolume" min="0" max="200" value="100" step="1"
+                    class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+            </div>
+
+            <div class="flex items-center space-x-2">
+                <input type="checkbox" id="muteVideoAudio" class="h-5 w-5 text-blue-500 bg-gray-800 border-none rounded-md">
+                <label for="muteVideoAudio">Mute Video Audio</label>
+            </div>
+
+            <div class="flex items-center space-x-2">
+                <input type="checkbox" id="granularControl" class="h-5 w-5 text-blue-500 bg-gray-800 border-none rounded-md">
+                <label for="granularControl">Granular Control (0.1%)</label>
+            </div>
+
+            <div class="flex items-center space-x-2">
+                <input type="checkbox" id="rightVolume" class="h-5 w-5 text-blue-500 bg-gray-800 border-none rounded-md">
+                <label for="rightVolume">Right Volume</label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button id="sendVolume"
+            class="mt-4 w-full py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-lg hover:opacity-80 transition">
+            Send Volume Settings
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

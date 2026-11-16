@@ -1,6 +1,6 @@
 # Video Volume Adjuster
 
-Give a video editor concrete music and voice level feedback from a simple browser form.
+“Make the music a little quieter” is hard to act on without a shared reference. I built this form to collect separate music and vocal level preferences plus a mute choice, then email those settings to the editor. It doesn’t adjust or play the video; fork the review flow for your own edit handoff and let me know what would make client feedback clearer.
 
 ## Try the review workflow
 

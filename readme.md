@@ -1,29 +1,12 @@
-# 🎬 Video Volume Adjuster  
+# Video Volume Adjuster
 
-I built this tool while working as a video editor for a client who kept wanting to change just the music volume again and again in premiere. Instead of manually adjusting the mix in premiere (don't want em to open an editor, that's what they're paying me for), this web app allows users to tweak music and vocal volumes directly in the browser before finalizing edits.  
+Give a video editor concrete music and voice level feedback from a simple browser form.
 
-## 🚀 Features  
-- Adjust **music** and **vocals** separately (0-200% range)  
-- Option to **mute** the original track audio  
-- Granular control for **precise** volume adjustments  
-- Simple, clean **dark-themed UI** with Tailwind CSS  
-- Sends the adjusted settings via **email** for easy reference  
+## Try the review workflow
 
-## 🛠️ How It Works  
-1. Upload your video  
-2. Adjust the **music** and **vocals** levels  
-3. Choose whether to **mute the original track**  
-4. Send settings to your email  
+1. From this folder, run `npm install`.
+2. Add a local `.env` with `BREVO_API_KEY`, `EMAIL_FROM`, and `EMAIL_TO`. Use a Brevo-approved sender and your own test inbox for an end-to-end test.
+3. Supply the files referenced by [the review page](public/index.html) at `public/videos/video.mp4`, `public/audio/music.mp3`, and `public/audio/vocals.mp3`.
+4. Run `node server.js`, open [localhost:3000](http://localhost:3000), choose the music and vocal settings, and click **Send Volume Settings**.
 
-
-## 🔧 Tech Stack  
-- **Frontend:** HTML, Tailwind CSS, JavaScript  
-- **Backend:** Node.js, Express  
-- **Email API:** Brevo (formerly Sendinblue)  
-
----
-
-💡 **Future Improvements**  
-- Ability to preview audio changes in real-time  
-- Direct export options with the adjusted volume  
-- Cloud-based storage for quick access  
+The current submission path emails the chosen slider values and mute preference. The checked-in client does not wire the sliders to live playback, and the sample media is external. Treat this as a feedback-form prototype. Run the email endpoint privately while testing.

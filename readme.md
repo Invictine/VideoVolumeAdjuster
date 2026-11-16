@@ -10,3 +10,14 @@ Give a video editor concrete music and voice level feedback from a simple browse
 4. Run `node server.js`, open [localhost:3000](http://localhost:3000), choose the music and vocal settings, and click **Send Volume Settings**.
 
 The current submission path emails the chosen slider values and mute preference. The checked-in client does not wire the sliders to live playback, and the sample media is external. Treat this as a feedback-form prototype. Run the email endpoint privately while testing.
+
+## Request flow
+
+```mermaid
+flowchart LR
+  Reviewer[Browser form] -->|Volume choices| Express[Express server]
+  Express -->|Email payload| Brevo[Brevo API]
+  Brevo --> Recipient[Configured review inbox]
+```
+
+The repository does not include the media files named above. This version sends review settings; it does not render or export an adjusted video mix.

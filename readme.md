@@ -11,6 +11,14 @@ Give a video editor concrete music and voice level feedback from a simple browse
 
 The current submission path emails the chosen slider values and mute preference. The checked-in client does not wire the sliders to live playback, and the sample media is external. Treat this as a feedback-form prototype. Run the email endpoint privately while testing.
 
+## Interface preview
+
+![Volume review form in a local browser capture](docs/media/volume-adjuster.png)
+
+Local interface capture; media files and the submission service are not configured.
+
+[Watch the local controls interaction recording](docs/media/volume-controls.webm) (no backend submission or audio playback is shown).
+
 ## Request flow
 
 ```mermaid

@@ -1,6 +1,10 @@
 # Video Volume Adjuster
 
-“Make the music a little quieter” is hard to act on without a shared reference. I built this form to collect separate music and vocal level preferences plus a mute choice, then email those settings to the editor. It doesn’t adjust or play the video; fork the review flow for your own edit handoff and let me know what would make client feedback clearer.
+Vague client notes like 'make the music a bit softer' create endless revision loops without explicit numerical references. This review tool provides client-facing sliders for background music and vocal levels, packaging preferences and mute selections into a structured payload sent directly to the editor via the Brevo email API. The browser interface is focused purely on collecting client preferences rather than real-time audio re-mixing or playback. Fork the review workflow for your own client handoffs and adapt the form fields to your post-production pipeline.
+
+[![Video Volume Adjuster](media/overview.png)](media/walkthrough.mp4)
+*Click preview above to watch recorded interface demo.*
+
 
 ## Try the review workflow
 
